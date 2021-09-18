@@ -1,4 +1,4 @@
-# Looper
+# FreqDetect
 
 ## Author
 
