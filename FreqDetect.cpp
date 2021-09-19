@@ -155,6 +155,19 @@ void AddMovAveValue(float val)
     aveBufPtr++;
 }
 
+// Function for calculating median
+double findMedian(int a[], int n)
+{
+    // First we sort the array
+    sort(a, a + n);
+ 
+    // check for even case
+    if (n % 2 != 0)
+        return (double)a[n / 2];
+ 
+    return (double)(a[(n - 1) / 2] + a[n / 2]) / 2.0;
+}
+
 #define ZEROCROSS 0.005
 
 float GetPeakPeakInterval()
@@ -272,7 +285,7 @@ float GetPeakPeakInterval()
         peakSamplePeriods[peakSampleIndex-1] = peakSamples[peakSampleIndex] - peakSamples[peakSampleIndex-1];
     }
 
-    // average the periods
+    // average the periods - would median work better?
     int totalPeriod = 0;
     int averagePeriod = 0;
     for (int perIndex = 0; perIndex < numPeriods; perIndex++)
