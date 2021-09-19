@@ -5,6 +5,7 @@
 Karl Thorkildsen
 
 ## Description
+Calculates the frequency of a signal
 Displays whether the input signal is close to the expected frequency
 
 [Source Code]
