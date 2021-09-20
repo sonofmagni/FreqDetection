@@ -46,6 +46,7 @@ THE SOFTWARE.
 
 using namespace daisysp;
 using namespace daisy;
+using namespace std;
 
 static DaisySeed seed;
 static DaisyPetal petal;
